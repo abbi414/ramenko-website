@@ -1,0 +1,14 @@
+# Original model file (use public/green_inside_2.obj instead)
+green_inside 2.obj
+
+# Dependencies
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# Environment
+.env
+.env.local
