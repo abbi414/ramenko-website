@@ -74,7 +74,7 @@
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.2;
+    renderer.toneMappingExposure = 1.8;
     renderer.outputColorSpace = THREE.SRGBColorSpace;
 
     const scene = new THREE.Scene();
@@ -107,30 +107,30 @@
     });
 
     // ─── Lighting ─────────────────────────────────────────────────────────────────
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
     scene.add(ambientLight);
 
-    const keyLight = new THREE.DirectionalLight(0xffffff, 2.5);
+    const keyLight = new THREE.DirectionalLight(0xffffff, 4.5);
     keyLight.position.set(5, 10, 5);
     keyLight.castShadow = true;
     keyLight.shadow.mapSize.width = 2048;
     keyLight.shadow.mapSize.height = 2048;
     scene.add(keyLight);
 
-    const fillLight = new THREE.DirectionalLight(0x88ccff, 0.8);
+    const fillLight = new THREE.DirectionalLight(0x88ccff, 2.0);
     fillLight.position.set(-5, 3, -5);
     scene.add(fillLight);
 
-    const rimLight = new THREE.DirectionalLight(0x00ff88, 0.4);
+    const rimLight = new THREE.DirectionalLight(0x00ff88, 1.2);
     rimLight.position.set(0, -5, -8);
     scene.add(rimLight);
 
     // Point lights for drama
-    const pointLight1 = new THREE.PointLight(0x00ff88, 1.5, 30);
+    const pointLight1 = new THREE.PointLight(0x00ff88, 3.0, 30);
     pointLight1.position.set(3, 5, 3);
     scene.add(pointLight1);
 
-    const pointLight2 = new THREE.PointLight(0x0088ff, 1.0, 30);
+    const pointLight2 = new THREE.PointLight(0x0088ff, 2.5, 30);
     pointLight2.position.set(-4, 2, -4);
     scene.add(pointLight2);
 
